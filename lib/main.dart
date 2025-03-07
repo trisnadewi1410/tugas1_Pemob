@@ -20,44 +20,44 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: const Color.fromRGBO(26, 24, 162, 1),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            PictApp(), 
-            SizedBox(height: 20), 
-            Text(
-              'Ni Komang Ayu Trisna Dewi',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'ayu.trisna.dewi@student.undiksha.ac.id',
-              style: TextStyle(fontSize: 16, color: Colors.blue),
-            ),
-            SizedBox(height: 60), 
-            Column(
-              children: [
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _buildInfoCard(Icons.location_on, 'Alamat', 'Perumahan Liligundi'),
-                    _buildInfoCard(Icons.home, 'Asal', 'Karangasem, Bali')
-                    
-                  ],
-                ),
-                SizedBox(height: 60), 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _buildInfoCard(Icons.school, 'Universitas', 'Universitas Pendidikan Ganesha'),
-                    _buildInfoCard(Icons.emoji_events, 'Sertifikat', 'Sertifikat Lomba'),
-                  ],
-                ),
-              ],
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              PictApp(), 
+              SizedBox(height: 20), 
+              Text(
+                'Ni Komang Ayu Trisna Dewi',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 5),
+              Text(
+                'ayu.trisna.dewi@student.undiksha.ac.id',
+                style: TextStyle(fontSize: 16, color: Colors.blue),
+              ),
+              SizedBox(height: 60), 
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildInfoCard(Icons.location_on, 'Alamat', 'Perumahan Liligundi'),
+                      _buildInfoCard(Icons.home, 'Asal', 'Karangasem, Bali')
+                    ],
+                  ),
+                  SizedBox(height: 30), 
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildInfoCard(Icons.school, 'Universitas', 'Universitas Pendidikan Ganesha'),
+                      _buildInfoCard(Icons.emoji_events, 'Sertifikat', 'Sertifikat Lomba'),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -96,7 +96,7 @@ class PictApp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 40), // Memberikan jarak dari atas layar
+          SizedBox(height: 30),
           ClipOval(
             child: Image.network(
               'https://raw.githubusercontent.com/trisnadewi1410/Trisna-PersonalWebsite/main/img/FOTO.png',
